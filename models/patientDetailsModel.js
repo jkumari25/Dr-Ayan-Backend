@@ -3,7 +3,6 @@ const mongoose= require('mongoose');
 
 const patientDetailSchema= new mongoose.Schema({
     id:{type: Number},
-    details:{
         date:{type:String},
         slot:{type:String},
         name:{type:String},
@@ -11,7 +10,7 @@ const patientDetailSchema= new mongoose.Schema({
         problem:{type:String},
         address:{type:String},
         category:{type: String},
-    }
+   
 });
 
 module.exports = mongoose.model("Patient",patientDetailSchema);
