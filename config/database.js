@@ -1,7 +1,7 @@
 const mongoose= require('mongoose');
 
 const connectDatabase= () => {
-    mongoose.connect(process.env.mongoURL,{useNewUrlParser:true,useUnifiedTopology:true})
+    mongoose.connect(process.env.mongoURL)
     .then((data) =>{
     console.log(`Mongodb connected with server ${data.connection.host}`)
 })
