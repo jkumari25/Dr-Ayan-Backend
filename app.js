@@ -1,8 +1,12 @@
 const express= require('express');
 const errorMiddleware= require("./middleware/error");
+const cors= require('cors');
 
 const app= express();
 app.use(express.json());
+app.use(cors({
+    origin:"*"
+}));
 
 app.get("/",(req,res)=>{
     res.send("HOME PAGE")
