@@ -4,7 +4,7 @@ const { delayTimingForm, getDetailTimingForm } = require('../controllers/delayTi
 
 const router= express.Router();
 
-router.route("/delay").post(delayTimingForm);
+router.route("/delaytime").post(delayTimingForm);
 router.route("/getdelay").get(getDetailTimingForm);
 
 module.exports= router;
