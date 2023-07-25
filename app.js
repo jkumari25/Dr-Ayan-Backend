@@ -14,9 +14,11 @@ app.get("/",(req,res)=>{
 
 const patient= require("./routes/patientRoutes");
 const time= require("./routes/delayTimingRoutes");
+const appointment= require("./routes/appointmentRoutes");
 
 app.use("/api/v1",patient);
 app.use("/api/v1",time);
+app.use("/api/v1",appointment);
 
 //Middleware for errors
 app.use(errorMiddleware);
