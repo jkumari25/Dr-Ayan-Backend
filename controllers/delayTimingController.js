@@ -4,10 +4,10 @@ const Timing= require("../models/delayTimingModel");
 // Post Delay Timing Details:-
 exports.delayTimingForm= catchAsyncErrors(async(req,res,next) => {
 
-    const {id,startTime,delayTime,startDate,endDate}= req.body;
+    const {showStartDate,showEndDate,showTime,sliderValue}= req.body;
 
     const time= new Timing({
-        id,startTime,delayTime,startDate,endDate
+        showStartDate,showEndDate,showTime,sliderValue
     });
 
     await time.save();
