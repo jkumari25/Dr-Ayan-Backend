@@ -4,7 +4,7 @@ const morningAppointmentSchema= new mongoose.Schema({
     showEndDate: {type: String},
     isMorning:{type:String},
     isMorningTimeShow:{type:String},
-    status:{type:Boolean}
+    status:{type:String}
 });
 
 module.exports = mongoose.model("MorningAppointment",morningAppointmentSchema);
