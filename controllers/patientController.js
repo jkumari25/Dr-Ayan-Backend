@@ -4,10 +4,10 @@ const Patient= require("../models/patientDetailsModel");
 // Post Patient Details:-
 exports.patientDetailForm= catchAsyncErrors(async(req,res,next) => {
 
-    const {id, category,details,date,slot,name,phone,problem,address}= req.body;
+    const {id, category,details,date,slot,name,phone,problem,address,payment}= req.body;
 
     const patient= new Patient({
-        id,category,details,date,slot,name,phone,problem,address
+        id,category,details,date,slot,name,phone,problem,address,payment
     });
 
     await patient.save();

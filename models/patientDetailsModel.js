@@ -10,7 +10,7 @@ const patientDetailSchema= new mongoose.Schema({
         problem:{type:String},
         address:{type:String},
         category:{type: String},
-   
+        payment:{type:String},
 });
 
 module.exports = mongoose.model("Patient",patientDetailSchema);
